@@ -31,7 +31,8 @@ $(document).ready(function() {
 		var message = 'Card selected.';
 		if (cardValue) message = 'Card changed.';
 		socket.emit('chat', {        message: message,        handle: handle.value    });
-		cardValue = 'card: ' + e.target.innerText;
+		//cardValue = 'card: ' + e.target.innerText;
+		cardValue = 'card: ' + $(e.target).data("value");;
 		$(".one-card .card p").text(e.target.innerText)
 		$('.one-card .card').addClass('back').removeClass('front');
 
