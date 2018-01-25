@@ -48,7 +48,7 @@ body, html {
   width: 100%;
 }
 .one-card .card.back {
-  background-image: url('nipo-cover.png');
+  background-image: url('cardback.png');
   background-size: cover;
 }
 .one-card .card.front {
