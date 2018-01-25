@@ -14,6 +14,7 @@ body, html {
   height: 25%;
   width: 31%;
   background-size: cover;
+  margin-bottom: 5%;
 }
 .card0 {
   background-image: url('card0.png');
