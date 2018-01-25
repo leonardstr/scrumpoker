@@ -43,6 +43,7 @@ $(document).ready(function() {
 	$('#back').click(function() {
 		$('.card-container').show();
 		$('.one-card').hide();
+		$('.one-card .card').removeClass(selectedCard);
 	});
 
 	$('.one-card .card').click(function() {
