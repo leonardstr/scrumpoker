@@ -13,11 +13,12 @@ body, html {
   margin: 1%;
   height: 31%;
   width: 31%;
+  /*background-image: url('nipo-cover.png');*/
 }
 .card-container .card p {
   height: 100%;
-  background-color: #be311a;
-  color: #ffffff;
+  background-color: #02A79C;
+  color: #ffffff;/**/
   margin: 0;
   padding: 0;  
   display: block;
@@ -30,6 +31,7 @@ body, html {
   overflow: hidden;
   cursor: pointer;  
 }
+
 
 .one-card {
   height: 90%;
@@ -45,27 +47,35 @@ body, html {
   height: 100%;
   width: 100%;
 }
+.one-card .card.back {
+  background-image: url('nipo-cover.png');
+  background-size: cover;
+}
+.one-card .card.front {
+  background-color: #02A79C;
+  background-size: cover;
+}
 .one-card .card.back p {
-  color: #be311a;
+  display: none;
 }
 .one-card .card.front p {
   color: #ffffff;
 }
 .one-card .card p {
   height: 100%;
-  background-color: #be311a;
   margin: 0;
   padding: 0;  
   display: block;
 
   font-weight: bold;
-  font-size: 10em;
+  font-size: 14em;
   padding: 1em 0em;
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;  
 }
+
 
 
 /* css */
