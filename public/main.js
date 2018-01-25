@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
 	}
 	
 	// Make connection
-var socket2 = io.connect('http://localhost:4000');
+//var socket2 = io.connect('http://localhost:4000');
 
 $(document).ready(function() {
 	
