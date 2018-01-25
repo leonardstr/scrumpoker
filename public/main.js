@@ -17,7 +17,11 @@ $(document).ready(function() {
 	
 	cardValue = null;
 	
+	var selectedCard = "";
+
 	$('.card-container .card').click(function(e) {
+		selectedCard = $(e.target).data("nr");
+
 		handle = document.getElementById('handle');
 		if (!handle.value) 
 		{
@@ -43,9 +47,10 @@ $(document).ready(function() {
 	$('.one-card .card').click(function() {
 		
 		if ($('.one-card .card').hasClass('back')) {
-			$('.one-card .card').removeClass('back').addClass('front');
+			$('.one-card .card').removeClass('back');
+			$('.one-card .card').addClass(selectedCard);
 		} else {
-			$('.one-card .card').addClass('back').removeClass('front');
+			$('.one-card .card').addClass('back').removeClass(selectedCard);
 		}
 		
 		handle = document.getElementById('handle');
