@@ -9,10 +9,25 @@ if ('serviceWorker' in navigator) {
 	  });
 	});
 	}
+	
+	// Make connection
+var socket2 = io.connect('http://localhost:4000');
 
 $(document).ready(function() {
 	
+	cardValue = null;
+	
 	$('.card-container .card').click(function(e) {
+		handle = document.getElementById('handle');
+		if (!handle.value) 
+		{
+			alert('Please, select a name to participate.');
+			return;
+		}
+		var message = 'Card selected.';
+		if (cardValue) message = 'Card changed.';
+		socket.emit('chat', {        message: message,        handle: handle.value    });
+		cardValue = 'card: ' + e.target.innerText;
 		$(".one-card .card p").text(e.target.innerText)
 		$('.one-card .card').addClass('back').removeClass('front');
 
@@ -26,11 +41,15 @@ $(document).ready(function() {
 	});
 
 	$('.one-card .card').click(function() {
+		
 		if ($('.one-card .card').hasClass('back')) {
 			$('.one-card .card').removeClass('back').addClass('front');
 		} else {
 			$('.one-card .card').addClass('back').removeClass('front');
 		}
+		
+		handle = document.getElementById('handle');
+		socket.emit('chat', {        message: cardValue,        handle: handle.value    });
 	});
 
 });
