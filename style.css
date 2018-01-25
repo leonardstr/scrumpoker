@@ -2,7 +2,7 @@ body, html {
   height: 100%;
 }
 .card-container {
-  height: 90%;
+  height: 95%;
   padding-left: 1%;
   padding-right: 1%;  
   padding-top: 5%;
@@ -11,7 +11,7 @@ body, html {
 .card-container .card {
   float: left;
   margin: 1%;
-  height: 31%;
+  height: 25%;
   width: 31%;
   /*background-image: url('nipo-cover.png');*/
 }
@@ -34,10 +34,10 @@ body, html {
 
 
 .one-card {
-  height: 90%;
-  padding-left: 2%;
+  height: 95%;
+  padding-left: 1%;
   padding-right: 2%;  
-  padding-top: 5%;
+  padding-top: 4%;
   padding-bottom: 1%;
   display: none;
 }
