@@ -1,6 +1,8 @@
 # scrumpoker.github.io
 scrum poker
 
+
+## To Do list
 -   bootstrap
 - v hosting on https (100%)  
 - v planning poker - single player mode (90%)  
