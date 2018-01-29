@@ -1,6 +1,18 @@
 body, html {
   height: 100%;
 }
+.chat-container {
+  width: 100%;
+}
+.chat-container .chat-input {
+  float: left;
+  width: 60%;
+}
+.chat-container .chat-button {
+  float: left;
+  width: 20%;
+}
+
 .card-container {
   height: 95%;
   padding-left: 1%;
@@ -11,46 +23,46 @@ body, html {
 .card-container .card {
   float: left;
   margin: 1%;
-  height: 25%;
-  width: 31%;
+  height: 18%;
+  width: 23%;
   background-size: cover;
   margin-bottom: 5%;
 }
 .card0 {
-  background-image: url('card0.png');
+  background-image: url('img/card0.png');
 }
 .cardhalf {
-  background-image: url('cardhalf.png');
+  background-image: url('img/cardhalf.png');
 }
 .card1 {
-  background-image: url('card1.png');
+  background-image: url('img/card1.png');
 }
 .card2 {
-  background-image: url('card2.png');
+  background-image: url('img/card2.png');
 }
 .card3 {
-  background-image: url('card3.png');
+  background-image: url('img/card3.png');
 }
 .card5 {
-  background-image: url('card5.png');
+  background-image: url('img/card5.png');
 }
 .card8 {
-  background-image: url('card8.png');
+  background-image: url('img/card8.png');
 }
 .card13 {
-  background-image: url('card13.png');
+  background-image: url('img/card13.png');
 }
 .card20 {
-  background-image: url('card20.png');
+  background-image: url('img/card20.png');
 }
 .cardcoffee {
-  background-image: url('cardcoffee.png');
+  background-image: url('img/cardcoffee.png');
 }
 .cardquestionmark {
-  background-image: url('cardquestionmark.png');
+  background-image: url('img/cardquestionmark.png');
 }
 .cardinfinite {
-  background-image: url('cardinfinite.png');
+  background-image: url('img/cardinfinite.png');
 }
 .card-container .card p {
   height: 100%;
@@ -92,7 +104,7 @@ body, html {
   display: none !important;
 }
 .one-card .card.back {
-  background-image: url('cardback.png');
+  background-image: url('img/cardback.png');
   background-size: cover;
 }
 .one-card .card.front {

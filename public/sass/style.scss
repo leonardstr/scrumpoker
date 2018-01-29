@@ -1,0 +1,190 @@
+body, html {
+	height: 100%;
+	font-family: Arial;
+}
+body {
+	margin: 0px 8px;
+	color:gray;	
+}
+
+button {
+	border-radius: 3px;
+	border: none;
+	font-size: 0.9rem;
+	padding: 0.6rem 1em;
+	color: white;
+	margin: 0 0.25rem;
+	text-align: center;
+	background: #BABABA;
+	border-bottom: 1px solid #999;
+	width: 90%;
+}
+input{
+	padding: 8px 8px;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	background: #fff;
+	border: 1px solid #eee;
+	font-size: 14px;
+}
+select{
+	padding: 7px 8px;
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	background: #fff;
+	border: 1px solid #eee;
+	font-size: 14px;
+	color: gray;
+}
+
+.table-container {
+	clear: both;
+	height: 39%;
+	padding: 1%;
+
+	.card-holder {
+		float: left;
+		height: 40%;
+		margin: 1%;
+		margin-bottom: 5%;
+		text-align: center;
+		width: 23%;
+		
+		.card {
+			background-size: cover;
+			height: 100%;
+		}
+		span.name {
+			color:gray;
+			text-align: center;
+		}		
+	}
+}
+
+.message-container {
+	clear: both;
+	height: 8%;
+	width: 100%;
+	text-align: center;
+	display: none;
+
+	.message-input {
+		float: left;
+		width: 35%;
+		margin: 0 1%;
+	}
+	.message-button {
+		float: left;
+		width: 25%;
+	}
+	.message {
+		padding-top: 4%;
+	}
+	.message-centerbutton {
+		padding: 0% 25%;
+	}
+	&.name {
+		display: block;
+	}
+	&.wait {
+		display: none;
+	}
+}
+
+.hand-container {
+	clear: both;
+	height: 50%;
+	padding: 1%;
+
+	.card-holder {
+		float: left;
+		height: 31%;
+		margin: 1%;
+		width: 23%;
+		
+		.card {
+			background-size: cover;
+			height: 100%;
+		}
+	}
+}
+
+.cardempty {
+    border: 1px solid gray;
+	border-radius: 8px;
+}
+.card0 {
+	background-image: url('../img/card0.png');
+}
+.cardhalf {
+	background-image: url('../img/cardhalf.png');
+}
+.card1 {
+	background-image: url('../img/card1.png');
+}
+.card2 {
+	background-image: url('../img/card2.png');
+}
+.card3 {
+	background-image: url('../img/card3.png');
+}
+.card5 {
+	background-image: url('../img/card5.png');
+}
+.card8 {
+	background-image: url('../img/card8.png');
+}
+.card13 {
+	background-image: url('../img/card13.png');
+}
+.card20 {
+	background-image: url('../img/card20.png');
+}
+.cardcoffee {
+	background-image: url('../img/cardcoffee.png');
+}
+.cardquestionmark {
+	background-image: url('../img/cardquestionmark.png');
+}
+.cardinfinite {
+	background-image: url('../img/cardinfinite.png');
+}
+.cardback {
+	background-image: url('../img/cardback.png');
+}
+
+.one-card {
+	height: 95%;
+	padding-left: 1%;
+	padding-right: 2%;
+	padding-top: 4%;
+	padding-bottom: 1%;
+	display: none;
+
+	.card {
+		float: left;
+		margin: 1%;
+		height: 76%;
+		width: 100%;
+		background-size: cover;
+		&.back {
+			background-image: url('../img/cardback.png');
+			background-size: cover;
+			p {
+				display: none;
+			}
+		}
+		&.front {
+			background-size: cover;
+		}
+		p {
+			display: block;
+		}		
+	}
+}
+.hidden {
+	display: none !important;
+}
+

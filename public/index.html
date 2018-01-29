@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-		 <meta name="theme-color" content="#ffffff">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">
-        <title>Scrum Poker - Nipo Collaboration Suite</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
-		<link rel="manifest" href="/manifest.json">
-	  <link rel="stylesheet" type="text/css" href="style.css">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	  <script src="jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	  <script src='main.js'></script>
-        <link href="/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-
-        <div id="scrum-chat">
-            <h2>Scrum Poker Chat</h2>
-            <div id="chat-window">
-                <div id="output"></div>
-                <div id="feedback"></div>
-            </div>
-            <input id="handle" type="text" placeholder="Name" />
-            <input id="message" type="text" placeholder="Message" />
-            <button id="send">Send</button>
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#69c773">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Scrum Poker - Nipo Collaboration Suite</title>
+    <link href="manifest.json" rel="manifest" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <script src="js/socket.io.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="table-container">
+        <div class="card-holder template hidden">
+            <div class="card cardempty"></div>
+            <span class="name"></span>
         </div>
-		
- <div class="card-container">
-    <div class="card card0" data-nr="card0" data-value="0"><p>0</p></div>
-    <div class="card cardhalf" data-nr="cardhalf" data-value="1/2"><p>1/2</p></div>
-    <div class="card card1" data-nr="card1" data-value="1"><p>1</p></div>
-    <div class="card card2" data-nr="card2" data-value="2"><p>2</p></div>
-    <div class="card card3" data-nr="card3" data-value="3"><p>3</p></div>
-    <div class="card card5" data-nr="card5" data-value="5"><p>5</p></div>
-    <div class="card card8" data-nr="card8" data-value="8"><p>8</p></div>
-    <div class="card card13" data-nr="card13" data-value="13"><p>13</p></div>
-    <div class="card card20" data-nr="card20" data-value="20"><p>20</p></div>
-    <div class="card cardcoffee" data-nr="cardcoffee" data-value="∞"><p>∞</p></div>
-    <div class="card cardquestionmark" data-nr="cardquestionmark" data-value="?"><p>?</p></div>
-    <div class="card cardinfinite" data-nr="cardinfinite" data-value="Coffee"><p>U</p></div>
-  </div>
-  <div class="one-card">
-      <button type="button" id="back">Back</button>
-      <!--<div class="card back"><p>1</p></div>-->
-      <div class="card back"></div>
+    </div>
+    <div class="message-container name">
+        <div class="message-input">
+            <select id="team" required>
+                <option selected>Select a team</option>
+                <option value="Blue">Blue</option>
+                <option value="Orange">Orange</option>
+                <option value="Red">Red</option>
+                <option value="Yellow">Yellow</option>
+                <option value="White">White</option>
+            </select>
+        </div>
+        <div class="message-input"><input id="name" type="text" placeholder="Enter your name" /></div>
+        <div class="message-button"><button id="join">Join</button></div>
+    </div>
+    <div class="message-container wait4teammembers">
+        <div class="message">Wait for everybody to join and then pick a card</div>
+    </div>
+    <div class="message-container selectcard">
+        <div class="message">Please select a card</div>
+    </div>
+    <div class="message-container wait4votes">
+        <div class="message">Waiting for other votes</div>
+    </div>
+    <div class="message-container showcards">
+        <div class="message message-centerbutton"><button id="showcards">Show cards</button></div>
+    </div>
+    <div class="message-container shownew">
+        <div class="message message-centerbutton"><button id="new">New round</button></div>
+    </div>
+            
+    <div class="hand-container">        
+        <div class="card-holder"><div class="card card0" data-nr="card0" data-value="0"></div></div>
+        <div class="card-holder"><div class="card cardhalf" data-nr="cardhalf" data-value="1/2"></div></div>
+        <div class="card-holder"><div class="card card1" data-nr="card1" data-value="1"></div></div>
+        <div class="card-holder"><div class="card card2" data-nr="card2" data-value="2"></div></div>
+        <div class="card-holder"><div class="card card3" data-nr="card3" data-value="3"></div></div>
+        <div class="card-holder"><div class="card card5" data-nr="card5" data-value="5"></div></div>
+        <div class="card-holder"><div class="card card8" data-nr="card8" data-value="8"></div></div>
+        <div class="card-holder"><div class="card card13" data-nr="card13" data-value="13"></div></div>
+        <div class="card-holder"><div class="card card20" data-nr="card20" data-value="20"></div></div>
+        <div class="card-holder"><div class="card cardcoffee" data-nr="cardcoffee" data-value="∞"></div></div>
+        <div class="card-holder"><div class="card cardquestionmark" data-nr="cardquestionmark" data-value="?"></div></div>
+        <div class="card-holder"><div class="card cardinfinite" data-nr="cardinfinite" data-value="Coffee"></div></div>
     </div>
 
+    <div class="one-card">
+        <button type="button" id="back">Back</button>
+        <div class="card back"></div>
+    </div>
+</body>
 
-    </body>
-    <script src="/chat.js"></script>
-	
-	
+<script src="/js/main.js"></script>
+
 </html>
