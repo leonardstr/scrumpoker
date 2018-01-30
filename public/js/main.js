@@ -10,7 +10,11 @@ if ('serviceWorker' in navigator) {
 	});
 }
 
-var socket = io.connect('http://localhost:4000/');
+var url = "https://scrumpoker2018.azurewebsites.net/";
+if (window.location.hostname == "localhost") {
+	url = "http://localhost:4000";
+}
+var socket = io.connect(url);
 
 var Main = (function ($, labels) {
 
