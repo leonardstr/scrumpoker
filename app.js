@@ -21,10 +21,4 @@ io.on('connection', (socket) => {
         console.log(data);
         io.sockets.emit('chat', data);
     });
-
-    // socket.on('disconnect', function() {
-    //     alert('app.js disconnect');
-    //     console.log('app.js disconnected');
-    //     io.sockets.emit('chat', 'disconnect');
-    // });
 });
