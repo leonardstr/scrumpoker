@@ -88,7 +88,9 @@ select {
     width: 23%; }
     .hand-container .card-holder .card {
       background-size: cover;
-      height: 100%; }
+      height: 100%; 
+      max-width: 160px;
+    }
 
 .cardempty {
   border: 1px solid gray;
