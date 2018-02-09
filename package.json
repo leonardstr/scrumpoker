@@ -4,6 +4,7 @@
   "description": "Scrum Poker App",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +17,7 @@
     "url": "https://github.com/scrumpoker/scrumpoker.github.io/issues"
   },
   "homepage": "https://github.com/scrumpoker/scrumpoker.github.io.git#readme",
-  "dependencies": {
+  "dependencies": {     
     "express": "^4.16.2",
     "express-manifest": "^0.1.1",
     "socket.io": "^1.7.4"

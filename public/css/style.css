@@ -88,8 +88,7 @@ select {
     width: 23%; }
     .hand-container .card-holder .card {
       background-size: cover;
-      height: 100%; 
-      max-width: 160px;
+      height: 100%;     
     }
 
 .cardempty {
@@ -135,6 +134,13 @@ select {
 .cardback {
   background-image: url("../img/cardback.png"); }
 
+.card {
+  max-width: 150px;
+  min-width: 90px;
+  max-height: 200px;
+  min-height: 110px;
+}  
+
 .one-card {
   height: 95%;
   padding-left: 1%;
@@ -146,7 +152,7 @@ select {
     float: left;
     margin: 1%;
     height: 76%;
-    width: 100%;
+    width: 100%;  
     background-size: cover; }
     .one-card .card.back {
       background-image: url("../img/cardback.png");
