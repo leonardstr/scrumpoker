@@ -1,23 +1,24 @@
 {
-  "name": "websockets-playlist",
+  "name": "scrum-poker",
   "version": "1.0.0",
-  "description": "A chat app using WebSockets",
-  "main": "index.js",
+  "description": "Scrum Poker App",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamshaunjp/websockets-playlist.git"
+    "url": "git+https://github.com/scrumpoker/scrumpoker.github.io.git"
   },
   "author": "The Net Ninja",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iamshaunjp/websockets-playlist/issues"
+    "url": "https://github.com/scrumpoker/scrumpoker.github.io/issues"
   },
-  "homepage": "https://github.com/iamshaunjp/websockets-playlist#readme",
+  "homepage": "https://github.com/scrumpoker/scrumpoker.github.io.git#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "express-manifest": "^0.1.1",
     "socket.io": "^1.7.4"
   },
   "devDependencies": {
