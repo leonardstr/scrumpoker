@@ -1,5 +1,7 @@
 var express = require('express');
 var socket = require('socket.io');
+var manifest = require('express-manifest');
+var path = require('path');
 
 // App setup
 var app = express();
@@ -10,6 +12,7 @@ var server = app.listen(port, function(){
 
 // Static files
 app.use(express.static('public'));
+app.use(manifest(path.join('public', 'manifest.json')));
 
 // Socket setup & pass server
 var io = socket(server);

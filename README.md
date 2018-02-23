@@ -15,8 +15,7 @@ Here is a video of Scrumpoker in action:
 * Clone the repository: `git clone https://github.com/scrumpoker/scrumpoker.github.io.git`
 * To run a local server: 
 ```bash
-npm install express --save
-npm install socket.io --save
+npm install 
 node app.js
 ```
 * Browse to `localhost:4000`
