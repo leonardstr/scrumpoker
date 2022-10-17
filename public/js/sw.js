@@ -3,10 +3,10 @@ var urlsToCache = [
   '/',
   '/index.html',
   '/img/card0.png',
-  '/img/nipo-logo48.png',
-  '/img/nipo-logo96.png',
-  '/img/nipo-logo192.png',
-  '/img/nipo-logo512.png',
+  '/img/logo48.png',
+  '/img/logo96.png',
+  '/img/logo192.png',
+  '/img/logo512.png',
   '/js/main.js',
   '/css/style.css'
 ];

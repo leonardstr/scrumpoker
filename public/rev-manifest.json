@@ -4,22 +4,22 @@
     "description": "",
     "icons": [
       {
-        "src": "img/nipo-logo48.png",
+        "src": "img/logo48.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "img/nipo-logo96.png",
+        "src": "img/logo96.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "img/nipo-logo192.png",
+        "src": "img/logo192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "img/nipo-logo512.png",
+        "src": "img/logo512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
