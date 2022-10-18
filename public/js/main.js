@@ -10,8 +10,8 @@ if ('serviceWorker' in navigator) {
 	});
 }
 
-//var url = "https://scrumpoker2018.azurewebsites.net/";
-var url = "https://purple-plant-000c4f903.2.azurestaticapps.net/";
+
+var url = window.location.href;
 if (window.location.hostname == "localhost") {
 	url = "http://localhost:4000";
 }
