@@ -10,7 +10,8 @@ if ('serviceWorker' in navigator) {
 	});
 }
 
-var url = "https://scrumpoker2018.azurewebsites.net/";
+
+var url = window.location.href;
 if (window.location.hostname == "localhost") {
 	url = "http://localhost:4000";
 }
